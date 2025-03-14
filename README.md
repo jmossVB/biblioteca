@@ -8,16 +8,25 @@ Deben desarrollar una aplicación de escritorio en Python utilizando Tkinter par
 El proyecto debe estar organizado en varios archivos de Python, siguiendo la estructura:
 
 biblioteca/
+
 │── app.py              # Archivo principal que inicia la aplicación
 
 │── interfaz.py         # Módulo que contiene las ventanas de Tkinter ok
+
 │── base_datos.py       # Módulo para manejar la conexión y consultas a PostgreSQL ok 
+
 │── operaciones.py      # Módulo con funciones CRUD (Crear, Leer, Actualizar, Eliminar) ok
+
 │── config.py           # Archivo para las configuraciones (credenciales de la BD, etc.) ok
+
 │── README.md           # Explicación del proyecto
+
 │── docs/
+
 │   ├── index.html      # Documentación generada con pydoc
+
 │   ├── base_datos.txt  # Documentación de la conexión con PostgreSQL (manual)
+
 └── requirements.txt    # Librerías necesarias (psycopg2, tkinter, etc.) OPCIONAL
 
 📌 Lo que deben hacer:
