@@ -9,6 +9,7 @@ El proyecto debe estar organizado en varios archivos de Python, siguiendo la est
 
 biblioteca/
 │── app.py              # Archivo principal que inicia la aplicación
+
 │── interfaz.py         # Módulo que contiene las ventanas de Tkinter ok
 │── base_datos.py       # Módulo para manejar la conexión y consultas a PostgreSQL ok 
 │── operaciones.py      # Módulo con funciones CRUD (Crear, Leer, Actualizar, Eliminar) ok
