@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module operaciones</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">operaciones</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:f%3A%5C02_jmoss%5C01_cursos%5Cpython%5Cbiblioteca%5Coperaciones.py">f:\02_jmoss\01_cursos\python\biblioteca\operaciones.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;Módulo&nbsp;con&nbsp;funciones&nbsp;CRUD&nbsp;(Crear,&nbsp;Leer,&nbsp;Actualizar,&nbsp;Eliminar)</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="psycopg2.html">psycopg2</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-actualizar_libro"><strong>actualizar_libro</strong></a>(
+    conn,
+    ncodlib,
+    ctitlib,
+    cautlib,
+    cgenlib,
+    nanopublib,
+    ccodisbn,
+    cedilib,
+    ncaneje
+)</dt><dd><span class="code">Actualiza&nbsp;los&nbsp;detalles&nbsp;de&nbsp;un&nbsp;libro&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Parámetros:<br>
+-&nbsp;conn:&nbsp;objeto&nbsp;de&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+-&nbsp;ncodlib:&nbsp;ID&nbsp;del&nbsp;libro&nbsp;a&nbsp;actualizar.<br>
+-&nbsp;ctitlib:&nbsp;Nuevo&nbsp;título&nbsp;del&nbsp;libro.<br>
+-&nbsp;cautlib:&nbsp;Nuevo&nbsp;autor&nbsp;del&nbsp;libro.<br>
+-&nbsp;cgenlib:&nbsp;Nuevo&nbsp;género&nbsp;del&nbsp;libro.<br>
+-&nbsp;nanopublib:&nbsp;Nuevo&nbsp;año&nbsp;de&nbsp;publicación&nbsp;del&nbsp;libro.<br>
+-&nbsp;ccodisbn:&nbsp;Nuevo&nbsp;ISBN&nbsp;del&nbsp;libro&nbsp;(debe&nbsp;tener&nbsp;13&nbsp;caracteres).<br>
+-&nbsp;cedilib:&nbsp;Nueva&nbsp;editorial&nbsp;del&nbsp;libro&nbsp;(opcional).<br>
+-&nbsp;ncaneje:&nbsp;Nueva&nbsp;cantidad&nbsp;de&nbsp;ejemplares&nbsp;del&nbsp;libro.</span></dd></dl>
+ <dl><dt><a name="-crear_libro"><strong>crear_libro</strong></a>(
+    conn,
+    ctitlib,
+    cautlib,
+    cgenlib,
+    nanopublib,
+    ccodisbn,
+    cedilib,
+    ncaneje
+)</dt><dd><span class="code">Inserta&nbsp;un&nbsp;nuevo&nbsp;libro&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Parámetros:<br>
+-&nbsp;conn:&nbsp;objeto&nbsp;de&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+-&nbsp;ctitlib:&nbsp;Título&nbsp;del&nbsp;libro.<br>
+-&nbsp;cautlib:&nbsp;Autor&nbsp;del&nbsp;libro.<br>
+-&nbsp;cgenlib:&nbsp;Género&nbsp;del&nbsp;libro.<br>
+-&nbsp;nanopublib:&nbsp;Año&nbsp;de&nbsp;publicación&nbsp;del&nbsp;libro.<br>
+-&nbsp;ccodisbn:&nbsp;ISBN&nbsp;del&nbsp;libro&nbsp;(debe&nbsp;tener&nbsp;13&nbsp;caracteres).<br>
+-&nbsp;cedilib:&nbsp;Editorial&nbsp;del&nbsp;libro&nbsp;(opcional).<br>
+-&nbsp;ncaneje:&nbsp;Cantidad&nbsp;de&nbsp;ejemplares&nbsp;del&nbsp;libro.</span></dd></dl>
+ <dl><dt><a name="-eliminar_libro"><strong>eliminar_libro</strong></a>(conn, ncodlib)</dt><dd><span class="code">Elimina&nbsp;un&nbsp;libro&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Parámetros:<br>
+-&nbsp;conn:&nbsp;objeto&nbsp;de&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+-&nbsp;ncodlib:&nbsp;ID&nbsp;del&nbsp;libro&nbsp;a&nbsp;eliminar.</span></dd></dl>
+ <dl><dt><a name="-existe_libro_por_isbn"><strong>existe_libro_por_isbn</strong></a>(conn, ccodisbn)</dt><dd><span class="code">Verifica&nbsp;si&nbsp;un&nbsp;libro&nbsp;con&nbsp;el&nbsp;mismo&nbsp;ISBN&nbsp;ya&nbsp;existe&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Parámetros:<br>
+-&nbsp;conn:&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos<br>
+-&nbsp;ccodisbn:&nbsp;código&nbsp;ISBN&nbsp;a&nbsp;verificar<br>
+&nbsp;<br>
+Retorna:<br>
+-&nbsp;True&nbsp;si&nbsp;el&nbsp;libro&nbsp;ya&nbsp;existe,&nbsp;False&nbsp;si&nbsp;no.</span></dd></dl>
+ <dl><dt><a name="-leer_libro_por_id"><strong>leer_libro_por_id</strong></a>(conn, ncodlib)</dt><dd><span class="code">Obtiene&nbsp;los&nbsp;detalles&nbsp;de&nbsp;un&nbsp;libro&nbsp;por&nbsp;su&nbsp;ID.<br>
+&nbsp;<br>
+Parámetros:<br>
+-&nbsp;conn:&nbsp;objeto&nbsp;de&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+-&nbsp;ncodlib:&nbsp;ID&nbsp;del&nbsp;libro&nbsp;a&nbsp;buscar.<br>
+&nbsp;<br>
+Retorna:<br>
+-&nbsp;Un&nbsp;diccionario&nbsp;con&nbsp;los&nbsp;detalles&nbsp;del&nbsp;libro&nbsp;si&nbsp;existe,&nbsp;o&nbsp;None&nbsp;si&nbsp;no&nbsp;se&nbsp;encuentra.</span></dd></dl>
+ <dl><dt><a name="-leer_libros"><strong>leer_libros</strong></a>(conn)</dt><dd><span class="code">Obtiene&nbsp;todos&nbsp;los&nbsp;libros&nbsp;almacenados&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Parámetros:<br>
+-&nbsp;conn:&nbsp;objeto&nbsp;de&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Retorna:<br>
+-&nbsp;Una&nbsp;lista&nbsp;de&nbsp;diccionarios&nbsp;con&nbsp;los&nbsp;detalles&nbsp;de&nbsp;los&nbsp;libros.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>conn</strong> = &lt;base_datos.ConexionBD object&gt;</td></tr></table>
+</body></html>

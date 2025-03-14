@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module interfaz</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">interfaz</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:f%3A%5C02_jmoss%5C01_cursos%5Cpython%5Cbiblioteca%5Cinterfaz.py">f:\02_jmoss\01_cursos\python\biblioteca\interfaz.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;Módulo&nbsp;que&nbsp;contiene&nbsp;las&nbsp;ventanas&nbsp;de&nbsp;Tkinter&nbsp;para&nbsp;la&nbsp;gestión&nbsp;de&nbsp;libros&nbsp;en&nbsp;la&nbsp;biblioteca.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="tkinter.messagebox.html">tkinter.messagebox</a><br>
+</td><td class="multicolumn"><a href="tkinter.html">tkinter</a><br>
+</td><td class="multicolumn"><a href="tkinter.ttk.html">tkinter.ttk</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-actualizar_lista"><strong>actualizar_lista</strong></a>()</dt><dd><span class="code">Función&nbsp;que&nbsp;actualiza&nbsp;la&nbsp;lista&nbsp;de&nbsp;libros&nbsp;en&nbsp;la&nbsp;interfaz.<br>
+&nbsp;<br>
+Elimina&nbsp;todos&nbsp;los&nbsp;elementos&nbsp;de&nbsp;la&nbsp;lista&nbsp;y&nbsp;luego&nbsp;inserta&nbsp;los&nbsp;libros&nbsp;obtenidos&nbsp;desde&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.</span></dd></dl>
+ <dl><dt><a name="-actualza_libro"><strong>actualza_libro</strong></a>()</dt><dd><span class="code">Toma&nbsp;los&nbsp;valores&nbsp;editados&nbsp;de&nbsp;los&nbsp;campos&nbsp;de&nbsp;entrada&nbsp;y&nbsp;actualiza&nbsp;el&nbsp;libro&nbsp;en&nbsp;la&nbsp;BD.</span></dd></dl>
+ <dl><dt><a name="-agregar_libro"><strong>agregar_libro</strong></a>()</dt><dd><span class="code">Función&nbsp;que&nbsp;recoge&nbsp;los&nbsp;datos&nbsp;del&nbsp;formulario,&nbsp;valida&nbsp;la&nbsp;entrada&nbsp;y&nbsp;agrega&nbsp;un&nbsp;nuevo&nbsp;libro&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+1.&nbsp;Obtiene&nbsp;los&nbsp;datos&nbsp;del&nbsp;formulario.<br>
+2.&nbsp;Valida&nbsp;que&nbsp;los&nbsp;campos&nbsp;obligatorios&nbsp;estén&nbsp;completos&nbsp;y&nbsp;sean&nbsp;correctos.<br>
+3.&nbsp;Si&nbsp;todo&nbsp;es&nbsp;válido,&nbsp;se&nbsp;llama&nbsp;a&nbsp;la&nbsp;función&nbsp;`crear_libro`&nbsp;para&nbsp;agregarlo&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.</span></dd></dl>
+ <dl><dt><a name="-datos_libro_seleccionado"><strong>datos_libro_seleccionado</strong></a>(event=None)</dt><dd><span class="code">Carga&nbsp;los&nbsp;datos&nbsp;del&nbsp;libro&nbsp;seleccionado&nbsp;en&nbsp;los&nbsp;campos&nbsp;de&nbsp;entrada&nbsp;consultando&nbsp;la&nbsp;BD.</span></dd></dl>
+ <dl><dt><a name="-eliminar_seleccionado"><strong>eliminar_seleccionado</strong></a>()</dt><dd><span class="code">Función&nbsp;para&nbsp;eliminar&nbsp;un&nbsp;libro&nbsp;seleccionado&nbsp;de&nbsp;la&nbsp;lista.<br>
+&nbsp;<br>
+1.&nbsp;Obtiene&nbsp;la&nbsp;selección&nbsp;del&nbsp;usuario&nbsp;en&nbsp;la&nbsp;lista.<br>
+2.&nbsp;Elimina&nbsp;el&nbsp;libro&nbsp;correspondiente&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+3.&nbsp;Actualiza&nbsp;la&nbsp;lista&nbsp;después&nbsp;de&nbsp;la&nbsp;eliminación.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>btn_salir</strong> = &lt;tkinter.Button object .!button4&gt;<br>
+<strong>combo_genero</strong> = &lt;tkinter.ttk.Combobox object .!combobox&gt;<br>
+<strong>conn</strong> = &lt;base_datos.ConexionBD object&gt;<br>
+<strong>entry_anio</strong> = &lt;tkinter.Entry object .!entry3&gt;<br>
+<strong>entry_autor</strong> = &lt;tkinter.Entry object .!entry2&gt;<br>
+<strong>entry_edicion</strong> = &lt;tkinter.Entry object .!entry6&gt;<br>
+<strong>entry_editorial</strong> = &lt;tkinter.Entry object .!entry5&gt;<br>
+<strong>entry_isbn</strong> = &lt;tkinter.Entry object .!entry4&gt;<br>
+<strong>entry_titulo</strong> = &lt;tkinter.Entry object .!entry&gt;<br>
+<strong>listBox</strong> = &lt;tkinter.Listbox object .!listbox&gt;<br>
+<strong>ventana</strong> = &lt;tkinter.Tk object .&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,40 @@
+DROP TABLE IF EXISTS public.libros;
+
+CREATE TABLE IF NOT EXISTS public.libros
+(
+    ncodlib SERIAL NOT NULL,
+    ctitlib character varying(255),
+    cautlib character varying(255),
+    cgenlib character varying(50),
+    nanopublib integer NOT NULL,
+    ccodisbn character(13)NOT NULL,
+    cedilib character varying(255),
+    ncaneje integer,
+    CONSTRAINT libros_pkey PRIMARY KEY (ncodlib),
+    CONSTRAINT libros_ccodisbn_key UNIQUE (ccodisbn)
+)
+;
+ALTER TABLE IF EXISTS public.libros
+    OWNER to postgres;
+
+    INSERT INTO libros (ctitlib, cautlib, cgenlib, nanopublib, ccodisbn, cedilib, ncaneje) VALUES
+('Cien años de soledad', 'Gabriel García Márquez', 'novela', 1967, '9780307474728', 'Editorial Sudamericana', 10),
+('1984', 'George Orwell', 'ciencia ficción', 1949, '9780451524935', 'Secker & Warburg', 8),
+('El señor de los anillos', 'J.R.R. Tolkien', 'fantasía', 1954, '9780261103573', 'Allen & Unwin', 12),
+('Crimen y castigo', 'Fiódor Dostoyevski', 'novela', 1866, '9780143107637', 'Editorial Alfaguara', 7),
+('Don Quijote de la Mancha', 'Miguel de Cervantes', 'novela', 1605, '9788424114024', 'Editorial Planeta', 15),
+('Yo, Claudio', 'Robert Graves', 'historia', 1934, '9780679724773', 'Editorial Planeta', 6),
+('Steve Jobs', 'Walter Isaacson', 'biografía', 2011, '9781451648539', 'Simon & Schuster', 9),
+('Los miserables', 'Victor Hugo', 'drama', 1862, '9788420675841', 'Editorial Akal', 10),
+('La guerra de los mundos', 'H.G. Wells', 'ciencia ficción', 1898, '9788497594250', 'Editorial Edhasa', 5),
+('El nombre de la rosa', 'Umberto Eco', 'novela', 1980, '9788426412280', 'Editorial Lumen', 7),
+('Harry Potter y la piedra filosofal', 'J.K. Rowling', 'fantasía', 1997, '9780747532743', 'Bloomsbury', 18),
+('Los juegos del hambre', 'Suzanne Collins', 'ciencia ficción', 2008, '9780439023481', 'Scholastic', 14),
+('Los pilares de la Tierra', 'Ken Follett', 'historia', 1989, '9780451166890', 'Signet Books', 11),
+('El diario de Ana Frank', 'Ana Frank', 'biografía', 1947, '9788497593062', 'Plaza & Janés', 13),
+('Hamlet', 'William Shakespeare', 'drama', 1603, '9780451526922', 'Penguin Books', 8),
+('Rayuela', 'Julio Cortázar', 'novela', 1963, '9788483830863', 'Editorial Sudamericana', 9),
+('El Hobbit', 'J.R.R. Tolkien', 'fantasía', 1937, '9780345339683', 'George Allen & Unwin', 10),
+('Fundación', 'Isaac Asimov', 'ciencia ficción', 1951, '9780553293357', 'Gnome Press', 6),
+('Sapiens: De animales a dioses', 'Yuval Noah Harari', 'historia', 2011, '9780062316097', 'Harper', 12),
+('El color púrpura', 'Alice Walker', 'drama', 1982, '9780151191536', 'Harcourt Brace', 7);

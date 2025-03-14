@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module base_datos</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">base_datos</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:f%3A%5C02_jmoss%5C01_cursos%5Cpython%5Cbiblioteca%5Cbase_datos.py">f:\02_jmoss\01_cursos\python\biblioteca\base_datos.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;Módulo&nbsp;para&nbsp;manejar&nbsp;la&nbsp;conexión&nbsp;y&nbsp;consultas&nbsp;a&nbsp;PostgreSQL</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"><a href="psycopg2.html">psycopg2</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="base_datos.html#ConexionBD">ConexionBD</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="ConexionBD">class <strong>ConexionBD</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Clase&nbsp;para&nbsp;manejar&nbsp;la&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;PostgreSQL.<br>
+Proporciona&nbsp;métodos&nbsp;para&nbsp;ejecutar&nbsp;consultas&nbsp;SQL&nbsp;y&nbsp;obtener&nbsp;resultados&nbsp;de&nbsp;manera&nbsp;segura.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="ConexionBD-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Establece&nbsp;la&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;usando&nbsp;psycopg2.</span></dd></dl>
+
+<dl><dt><a name="ConexionBD-cerrar_conexion"><strong>cerrar_conexion</strong></a>(self)</dt><dd><span class="code">Cierra&nbsp;la&nbsp;conexión&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.</span></dd></dl>
+
+<dl><dt><a name="ConexionBD-ejecutar_query"><strong>ejecutar_query</strong></a>(self, query, parametros=None)</dt><dd><span class="code">Ejecuta&nbsp;una&nbsp;consulta&nbsp;SQL&nbsp;(INSERT,&nbsp;UPDATE,&nbsp;DELETE)&nbsp;y&nbsp;realiza&nbsp;commit.<br>
+&nbsp;<br>
+Args:<br>
+-&nbsp;query&nbsp;(str):&nbsp;La&nbsp;consulta&nbsp;SQL&nbsp;a&nbsp;ejecutar.<br>
+-&nbsp;parametros&nbsp;(tuple,&nbsp;opcional):&nbsp;Parámetros&nbsp;para&nbsp;la&nbsp;consulta&nbsp;SQL.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;bool:&nbsp;True&nbsp;si&nbsp;la&nbsp;consulta&nbsp;se&nbsp;ejecutó&nbsp;correctamente,&nbsp;False&nbsp;en&nbsp;caso&nbsp;de&nbsp;error.</span></dd></dl>
+
+<dl><dt><a name="ConexionBD-get_conexion"><strong>get_conexion</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ConexionBD-obtener_resultados"><strong>obtener_resultados</strong></a>(self, query, parametros=None)</dt><dd><span class="code">Ejecuta&nbsp;una&nbsp;consulta&nbsp;SELECT&nbsp;y&nbsp;devuelve&nbsp;los&nbsp;resultados.<br>
+&nbsp;<br>
+Args:<br>
+-&nbsp;query&nbsp;(str):&nbsp;Consulta&nbsp;SQL&nbsp;de&nbsp;tipo&nbsp;SELECT.<br>
+-&nbsp;parametros&nbsp;(tuple,&nbsp;opcional):&nbsp;Parámetros&nbsp;para&nbsp;la&nbsp;consulta&nbsp;SQL.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;list:&nbsp;Lista&nbsp;de&nbsp;tuplas&nbsp;con&nbsp;los&nbsp;resultados,&nbsp;o&nbsp;una&nbsp;lista&nbsp;vacía&nbsp;en&nbsp;caso&nbsp;de&nbsp;error.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>DB_HOST</strong> = 'localhost'<br>
+<strong>DB_NAME</strong> = 'biblioteca'<br>
+<strong>DB_PASSWORD</strong> = 'postgres'<br>
+<strong>DB_PORT</strong> = '5432'<br>
+<strong>DB_USER</strong> = 'postgres'</td></tr></table>
+</body></html>
